@@ -250,28 +250,30 @@ html[data-theme="light"] .tags span { color: #555470; background: rgba(90,91,230
 }
 
 @media (max-width: 720px) {
-  :root { --shell: min(100% - 32px, 1180px); }
-  .nav { height: 72px; }
+  :root { --shell: min(100% - 24px, 1180px); }
+  .nav { height: auto; min-height: 72px; padding: 14px 0; flex-wrap: wrap; gap: 12px; }
+  .nav-actions { gap: 8px; margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
   .nav-links { display: none; }
-  .nav-cta { padding: 9px 15px; }
+  .nav-cta, .nav-resume { padding: 9px 14px; font-size: 13px; }
   .theme-toggle { width: 38px; height: 38px; }
   .cursor-aurora { display: none; }
-  .hero { min-height: auto; padding: 70px 0 80px; }
+  .hero { min-height: auto; padding: 56px 0 72px; gap: 34px; }
   h1 { font-size: clamp(46px, 14vw, 68px); }
   .hero-intro { font-size: 16px; }
-  .hero-meta { flex-wrap: wrap; gap: 25px 0; }
-  .hero-meta div { width: 50%; margin: 0; }
-  .hero-meta div:nth-child(2) { border: 0; padding-left: 20px; }
-  .hero-meta div:last-child { width: 100%; }
-  .portrait-wrap { min-height: 470px; }
-  .portrait-wrap::before { width: 370px; height: 370px; max-width: 95vw; max-height: 95vw; }
-  .portrait-frame { width: min(340px, 82vw); }
-  .orbit { width: 62px; height: 62px; }
-  .orbit-one { right: 2%; }
-  .orbit-two { left: 2%; }
-  .code-card { right: 2%; bottom: 3%; }
-  .section { padding-block: 80px; }
-  .section-heading { margin-bottom: 50px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .button { width: 100%; min-height: 50px; }
+  .hero-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 12px; margin-top: 34px; }
+  .hero-meta div { min-width: 0; margin: 0; padding: 0 0 0 14px; border-right: 0; border-left: 1px solid var(--line); }
+  .hero-meta div:last-child { grid-column: 1 / -1; }
+  .portrait-wrap { min-height: 420px; width: 100%; }
+  .portrait-wrap::before { width: min(360px, 88vw); height: min(360px, 88vw); max-width: 88vw; max-height: 88vw; }
+  .portrait-frame { width: min(305px, 80vw); }
+  .orbit { width: 56px; height: 56px; }
+  .orbit-one { right: 0; top: 10%; }
+  .orbit-two { left: 0; bottom: 12%; }
+  .code-card { right: 0; bottom: 0; max-width: calc(100% - 12px); }
+  .section { padding-block: 72px; }
+  .section-heading { margin-bottom: 42px; }
   .about-grid, .project-grid, .education-grid { grid-template-columns: 1fr; gap: 16px; }
   .about-grid { gap: 30px; }
   .about-copy { font-size: 15px; }
@@ -286,17 +288,28 @@ html[data-theme="light"] .tags span { color: #555470; background: rgba(90,91,230
   .skill-card { min-height: auto; }
   .skill-card h3 { margin-top: 40px; }
   .education-card:last-child { grid-column: auto; }
-  .contact-card { padding: 70px 22px; }
-  .contact-card h2 { font-size: 43px; }
-  .footer { padding: 30px 0; flex-direction: column; gap: 18px; text-align: center; }
+  .contact-card { padding: 60px 18px; }
+  .contact-card h2 { font-size: clamp(34px, 8vw, 43px); }
+  .contact-links { flex-wrap: wrap; row-gap: 14px; margin-top: 38px; }
+  .footer { padding: 26px 0; flex-direction: column; gap: 14px; text-align: center; }
 }
 
 @media (max-width: 430px) {
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .button { width: 100%; }
-  .hero-meta div { min-width: 0; padding-right: 12px; }
-  .code-card { right: -8px; }
-  .contact-links { gap: 18px; }
+  :root { --shell: min(100% - 20px, 1180px); }
+  .nav { gap: 10px; }
+  .nav-actions { width: 100%; justify-content: space-between; }
+  .nav-cta, .nav-resume { flex: 1 1 0; text-align: center; }
+  .hero { padding-top: 44px; }
+  h1 { font-size: clamp(40px, 15vw, 58px); }
+  .hero-intro { font-size: 15px; line-height: 1.7; }
+  .hero-meta { grid-template-columns: 1fr; }
+  .hero-meta div:last-child { grid-column: auto; }
+  .portrait-wrap { min-height: 380px; }
+  .portrait-frame { width: min(270px, 76vw); }
+  .code-card { position: static; margin-top: 14px; width: 100%; justify-content: center; }
+  .section { padding-block: 64px; }
+  .project-card, .contact-card, .education-card, .skill-card { border-radius: 12px; }
+  .contact-links { gap: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
