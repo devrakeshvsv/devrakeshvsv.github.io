@@ -126,8 +126,9 @@ h1 span { display: block; color: transparent; background: linear-gradient(90deg,
 .portrait-glow { position: absolute; inset: 8%; background: linear-gradient(135deg, #3989ff, #bd52ff); filter: blur(80px); opacity: .3; }
 .orbit { position: absolute; z-index: 3; width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%; background: rgba(12, 15, 38, .88); border: 1px solid rgba(132,126,255,.3); box-shadow: 0 12px 35px rgba(0,0,0,.32); backdrop-filter: blur(10px); animation: float 4s ease-in-out infinite; }
 .orbit span { font-size: 12px; font-weight: 700; color: var(--green); }
-.orbit-one { top: 12%; right: -2%; }
-.orbit-two { bottom: 14%; left: -2%; animation-delay: -2s; }
+.orbit-one { top: 11%; right: -4%; }
+.orbit-two { bottom: 13%; left: -4%; animation-delay: -2s; }
+.orbit-three { top: 52%; right: -10%; animation-delay: -1s; }
 .code-card { position: absolute; z-index: 4; right: -30px; bottom: 7%; display: flex; gap: 14px; padding: 14px 17px; border: 1px solid var(--line); border-radius: 8px; background: rgba(9,12,31,.88); backdrop-filter: blur(12px); box-shadow: 0 18px 50px rgba(0,0,0,.34); }
 .code-card span { color: #626985; font: 12px monospace; }
 .code-card code { color: #c3c8e1; font-size: 11px; }
@@ -266,8 +267,9 @@ html[data-theme="light"] .tags span { color: #555470; background: rgba(90,91,230
   .portrait-wrap::before { width: 370px; height: 370px; max-width: 95vw; max-height: 95vw; }
   .portrait-frame { width: min(340px, 82vw); }
   .orbit { width: 62px; height: 62px; }
-  .orbit-one { right: 2%; }
-  .orbit-two { left: 2%; }
+  .orbit-one { right: 1%; top: 10%; }
+  .orbit-two { left: 1%; bottom: 12%; }
+  .orbit-three { right: 3%; top: 56%; }
   .code-card { right: 2%; bottom: 3%; }
   .section { padding-block: 80px; }
   .section-heading { margin-bottom: 50px; }

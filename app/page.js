@@ -241,6 +241,9 @@ export default function Home() {
           <div className="orbit orbit-two">
             <span>APIs</span>
           </div>
+          <div className="orbit orbit-three">
+            <span>NestJS</span>
+          </div>
           <div className="portrait-frame">
             <div className="portrait-glow" />
             <Image src="/rakesh-profile.png" alt="Rakesh Vishwakarma" width={500} height={500} priority />
