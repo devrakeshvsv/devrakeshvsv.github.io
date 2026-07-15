@@ -76,7 +76,6 @@ const experience = [
 
 const projects = [
   {
-    number: "01",
     title: "Macha AI",
     description:
       "An AI-powered customer engagement platform enabling real-time conversations and intelligent automated responses.",
@@ -84,7 +83,6 @@ const projects = [
     stack: ["NodeJS", "ExpressJS", "MongoDB", "SocketIO", "REST APIs", "PassportJS", "OAuth"],
   },
   {
-    number: "02",
     title: "SkipperFit",
     description:
       "A fitness management platform for appointment scheduling, virtual consultations, and payment processing.",
@@ -176,7 +174,12 @@ export default function Home() {
         </div>
         <div className="nav-actions">
           <ThemeToggle />
-          <a className="nav-resume" href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")} target="_blank" rel="noreferrer">
+          <a
+            className="nav-resume"
+            href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")}
+            target="_blank"
+            rel="noreferrer"
+          >
             Resume
           </a>
           <a className="nav-cta" href="mailto:rakesh830566@gmail.com">
@@ -203,7 +206,12 @@ export default function Home() {
             <a className="button primary" href="#work">
               Explore my work <ArrowIcon />
             </a>
-            <a className="button tertiary" href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")} target="_blank" rel="noreferrer">
+            <a
+              className="button tertiary"
+              href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")}
+              target="_blank"
+              rel="noreferrer"
+            >
               View resume
             </a>
             <a className="button secondary" href="#contact">
@@ -270,7 +278,8 @@ export default function Home() {
           {experience.map((job, index) => (
             <article className="timeline-item reveal" key={job.company}>
               <div className="timeline-marker">
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                {/* <span>{String(index + 1).padStart(2, "0")}</span> */}
+                <span>{`${index + 1}`.padStart(2, "0")}</span>
               </div>
               <div className="job-head">
                 <div>
@@ -300,11 +309,10 @@ export default function Home() {
       <section className="work section shell" id="work">
         <SectionHeading eyebrow="Selected work">Projects built to solve real problems.</SectionHeading>
         <div className="project-grid">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article className="project-card reveal" key={project.title}>
               <div className="project-top">
-                <span>{project.number}</span>
-                <span className="project-arrow">↗</span>
+                <span>{`${index + 1}`.padStart(2, "0")}</span>
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -328,7 +336,7 @@ export default function Home() {
         <div className="skill-grid">
           {skills.map((group, index) => (
             <article className="skill-card reveal" key={group.label}>
-              <div className="skill-number">0{index + 1}</div>
+              <div className="skill-number">{`${index + 1}`.padStart(2, "0")}</div>
               <h3>{group.label}</h3>
               <div>
                 {group.items.map((item) => (
