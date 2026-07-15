@@ -182,7 +182,7 @@ export default function Home() {
           >
             Resume
           </a>
-          <a className="nav-cta" href="mailto:rakesh830566@gmail.com">
+          <a className="nav-cta" href="mailto:devrakeshvsv@gmail.com">
             Let&apos;s talk
           </a>
         </div>
@@ -396,15 +396,15 @@ export default function Home() {
             Let&apos;s build something <span>great together.</span>
           </h2>
           <p>I&apos;m open to backend engineering opportunities and meaningful collaborations.</p>
-          <a className="button primary" href="mailto:rakesh830566@gmail.com">
+          <a className="button primary" href="mailto:devrakeshvsv@gmail.com">
             Start a conversation <ArrowIcon />
           </a>
           <div className="contact-links">
-            <a href="mailto:rakesh830566@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/devalakshvsv" target="_blank" rel="noreferrer">
+            <a href="mailto:devrakeshvsv@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/devrakeshvsv" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a href="https://github.com/devalakshvsv" target="_blank" rel="noreferrer">
+            <a href="https://github.com/devrakeshvsv" target="_blank" rel="noreferrer">
               GitHub
             </a>
           </div>
