@@ -153,6 +153,9 @@ function SectionHeading({ eyebrow, children }) {
   );
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const withBasePath = (path) => `${basePath}${path}`;
+
 export default function Home() {
   return (
     <main>
@@ -173,7 +176,7 @@ export default function Home() {
         </div>
         <div className="nav-actions">
           <ThemeToggle />
-          <a className="nav-resume" href="/resume/Rakesh_Vishwakarma.pdf" target="_blank" rel="noreferrer">
+          <a className="nav-resume" href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")} target="_blank" rel="noreferrer">
             Resume
           </a>
           <a className="nav-cta" href="mailto:rakesh830566@gmail.com">
@@ -200,7 +203,7 @@ export default function Home() {
             <a className="button primary" href="#work">
               Explore my work <ArrowIcon />
             </a>
-            <a className="button tertiary" href="/resume/Rakesh_Vishwakarma.pdf" target="_blank" rel="noreferrer">
+            <a className="button tertiary" href={withBasePath("/resume/Rakesh_Vishwakarma.pdf")} target="_blank" rel="noreferrer">
               View resume
             </a>
             <a className="button secondary" href="#contact">
