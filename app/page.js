@@ -173,6 +173,9 @@ export default function Home() {
         </div>
         <div className="nav-actions">
           <ThemeToggle />
+          <a className="nav-resume" href="/resume/Rakesh_Vishwakarma.pdf" target="_blank" rel="noreferrer">
+            Resume
+          </a>
           <a className="nav-cta" href="mailto:rakesh830566@gmail.com">
             Let&apos;s talk
           </a>
@@ -196,6 +199,9 @@ export default function Home() {
           <div className="hero-actions">
             <a className="button primary" href="#work">
               Explore my work <ArrowIcon />
+            </a>
+            <a className="button tertiary" href="/resume/Rakesh_Vishwakarma.pdf" target="_blank" rel="noreferrer">
+              View resume
             </a>
             <a className="button secondary" href="#contact">
               Get in touch
